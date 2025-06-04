@@ -82,7 +82,7 @@ export async function activate(context: ExtensionContext) {
 		const regex = new RegExp(pattern);
 		const folders = workspace.workspaceFolders;
 		if (!folders) break;
-		if (folders.some((folder) => regex.test(folder.uri.fsPath))) {
+		if (folders.some((folder: { uri: { fsPath: string; }; }) => regex.test(folder.uri.fsPath))) {
 			isWorkspaceExcluded = true;
 			break;
 		}
@@ -147,7 +147,7 @@ export async function activate(context: ExtensionContext) {
 		await login();
 	}
 
-	window.onDidChangeWindowState(async (windowState) => {
+	window.onDidChangeWindowState(async (windowState: { focused: any; }) => {
 		if (config[CONFIG_KEYS.IdleTimeout] !== 0) {
 			if (windowState.focused) {
 				if (idle) {
@@ -173,3 +173,11 @@ export function deactivate() {
 	cleanUp();
 	void rpc.destroy();
 }
+function clearTimeout(_idle: any) {
+	throw new Error('Function not implemented.');
+}
+
+function setTimeout(_arg0: () => Promise<void>, _arg1: number): any {
+	throw new Error('Function not implemented.');
+}
+

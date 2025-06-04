@@ -59,7 +59,7 @@
 		"@commitlint/config-angular": "^19.8.0",
 		"@types/lodash-es": "^4.17.12",
 		"@types/lodash.merge": "^4.6.9",
-		"@types/node": "^22.14.0",
+		"@types/node": "^22.15.29",
 		"@types/vscode": "^1.96.2",
 		"@vscode/vsce": "^3.3.2",
 		"cross-env": "^7.0.3",
