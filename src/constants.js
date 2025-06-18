@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UNKNOWN_GIT_REPO_NAME = exports.UNKNOWN_GIT_BRANCH = exports.CURSOR_IMAGE_KEY = exports.VSCODE_INSIDERS_IMAGE_KEY = exports.VSCODE_IMAGE_KEY = exports.DEBUG_IMAGE_KEY = exports.IDLE_IMAGE_KEY = exports.FILE_SIZES = exports.FAKE_EMPTY = exports.EMPTY = exports.KNOWN_LANGUAGES = exports.KNOWN_EXTENSIONS = exports.CLIENT_ID = void 0;
+const languages_json_1 = __importDefault(require("./data/languages.json"));
+exports.CLIENT_ID = '383226320970055681';
+exports.KNOWN_EXTENSIONS = languages_json_1.default.KNOWN_EXTENSIONS;
+exports.KNOWN_LANGUAGES = languages_json_1.default.KNOWN_LANGUAGES;
+exports.EMPTY = '';
+exports.FAKE_EMPTY = '\u200B\u200B';
+exports.FILE_SIZES = [' bytes', 'KB', 'MB', 'GB', 'TB'];
+exports.IDLE_IMAGE_KEY = 'idle-vscode';
+exports.DEBUG_IMAGE_KEY = 'debug';
+exports.VSCODE_IMAGE_KEY = 'vscode';
+exports.VSCODE_INSIDERS_IMAGE_KEY = 'vscode-insiders';
+exports.CURSOR_IMAGE_KEY = 'cursor';
+exports.UNKNOWN_GIT_BRANCH = 'Unknown';
+exports.UNKNOWN_GIT_REPO_NAME = 'Unknown';
